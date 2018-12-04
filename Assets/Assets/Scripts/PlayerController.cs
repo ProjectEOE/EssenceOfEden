@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour {
         _isOnGround = false;
         _rigid = GetComponent<Rigidbody>();
         ToggleMouseOff();
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -63,5 +62,11 @@ public class PlayerController : MonoBehaviour {
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    static void ToggleMouseOn()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 }
